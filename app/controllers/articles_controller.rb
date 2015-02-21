@@ -17,8 +17,8 @@ class ArticlesController < ApplicationController
   	#We define article_params in 'private'
   	@article = Article.new(article_params)
   		
-  	@article.save
-  	redirect_to @article
+  	if @article.save
+  	 redirect_to new_article_path
 
   	else
   		render 'new'

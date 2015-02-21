@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
   get 'welcome/index'
 
-  resources :articles
+  get 'articles/index' => 'articles#index', as: :articles_index
+  get 'articles/show' => 'articles#show', as: :articles_show
+  
+  get 'articles/new' => 'articles#new', as: :new_article
+  post 'articles' => 'articles#create', as: :articles
+
+
+  # resources :articles
 
   root 'welcome#index'
 end
