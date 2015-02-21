@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
   get 'welcome/index'
 
-  get 'articles/index' => 'articles#index', as: :articles_index
-  get 'articles/show' => 'articles#show', as: :articles_show
-  
+  #we just need 1 'articles' _path; 'show' is also articles but we dont need to state it
+  get 'articles' => 'articles#index', as: :articles
+  #We show one 'article' at a time, so path is 'article'
+  get 'articles/:id' => 'articles#show', as: :article
   get 'articles/new' => 'articles#new', as: :new_article
-  post 'articles' => 'articles#create', as: :articles
+  post 'articles' => 'articles#create'
 
 
   # resources :articles
