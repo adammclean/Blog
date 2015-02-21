@@ -5,4 +5,10 @@ class ApplicationController < ActionController::Base
   	
   	def new
   	end
+
+  	#render method with key=>plain; value=>params[:article].inspect
+  	#params method is an object
+  	def create
+  		render plain: params[:article].inspect
+  	end
 end
