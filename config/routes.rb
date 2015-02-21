@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'articles/new' => 'articles#new', as: :new_article
   get 'articles/:id' => 'articles#show', as: :article
   post 'articles' => 'articles#create'
+  get 'articles/edit' => 'articles#edit', as: :edit_article
 
 
   # resources :articles
