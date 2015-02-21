@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   #we just need 1 'articles' _path; 'show' is also articles but we dont need to state it
   get 'articles' => 'articles#index', as: :articles
   #We show one 'article' at a time, so path is 'article'
-  get 'articles/:id' => 'articles#show', as: :article
   get 'articles/new' => 'articles#new', as: :new_article
+  get 'articles/:id' => 'articles#show', as: :article
   post 'articles' => 'articles#create'
 
 
