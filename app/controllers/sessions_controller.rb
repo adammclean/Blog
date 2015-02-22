@@ -13,3 +13,10 @@ class SessionsController < ApplicationController
   		render "new"
 
   end
+end
+	
+	#root_url is '#' in Railscast
+	def destroy
+		session[:user_id] = nil
+		redirect_to '#', :notice => "Logged out!"
+	end
