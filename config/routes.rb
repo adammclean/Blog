@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
   get 'welcome/index'
 
-  #we just need 1 'articles' _path; 'show' is also articles but we dont need to state it
+  #Index displays our articles so plural 'articles' makes sense
   get 'articles' => 'articles#index', as: :articles
-  #We show one 'article' at a time, so path is 'article'
+  #New_'article' as _path makes sense
   get 'articles/new' => 'articles#new', as: :new_article
+  #We show current @article after editing/creating; so 'article' _path makes sense
   get 'articles/:id' => 'articles#show', as: :article
+  #Create can share its 'articles' path with our Index; rails knows to differentiate a POST action
   post 'articles' => 'articles#create'
   get 'articles/edit' => 'articles#edit', as: :edit_article
   get 'articles/destroy' => 'articles@destroy'
