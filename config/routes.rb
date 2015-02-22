@@ -1,17 +1,22 @@
 Rails.application.routes.draw do
   get 'welcome/index'
 
-  #Index displays our articles so plural 'articles' makes sense
+  #INDEX - display a list of all photos
   get 'articles' => 'articles#index', as: :articles
-  #New_'article' as _path makes sense
+  #NEW - return an HTML form for creating a new photo
   get 'articles/new' => 'articles#new', as: :new_article
-  #We show current @article after editing/creating; so 'article' _path makes sense
-  get 'articles/:id' => 'articles#show', as: :article
-  #Create can share its 'articles' path with our Index; rails knows to differentiate a POST action
+  #CREATE - create a new photo
   post 'articles' => 'articles#create'
-  get 'articles/edit' => 'articles#edit', as: :edit_article
-  get 'articles/destroy' => 'articles@destroy'
+  #SHOW - display a specific photo, hence :id
+  get 'articles/:id' => 'articles#show'
+  #EDIT - return an HTML form for editing a photo
+  get 'articles/:id/edit' => 'articles#edit', as: :edit_article
+  #UPDATE - update a specific photo
+  get 'articles/:id' => 'articles#update'
+  #DELETE - delete a specific photo
+  get 'articles/:id/destroy' => 'articles#destroy', as: :destroy_article
 
+ 
   # resources :articles
 
   root 'welcome#index'
