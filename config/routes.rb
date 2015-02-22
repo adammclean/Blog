@@ -1,25 +1,34 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
+  
+  root 'welcome#index'
 
-  #INDEX - display a list of all photos
-  get 'articles' => 'articles#index', as: :articles
-  #NEW - return an HTML form for creating a new photo
-  get 'articles/new' => 'articles#new', as: :new_article
-  #CREATE - create a new photo
-  post 'articles' => 'articles#create'
-  #SHOW - display a specific photo, hence :id
-  get 'articles/:id' => 'articles#show'
-  #EDIT - return an HTML form for editing a photo
-  get 'articles/:id/edit' => 'articles#edit', as: :edit_article
-  #UPDATE - update a specific photo
-  get 'articles/:id' => 'articles#update'
-  #DELETE - delete a specific photo
-  get 'articles/:id/destroy' => 'articles#destroy', as: :destroy_article
+  resources :articles
+
+  ####INDEX - display a list of all photos
+  # get 'articles' => 'articles#index', as: :articles
+  
+  ####NEW - return an HTML form for creating a new photo
+  # get 'articles/new' => 'articles#new', as: :new_article
+  
+  ####CREATE - create a new photo
+  # post 'articles' => 'articles#create'
+  
+  ####SHOW - display a specific photo, hence :id
+  # get 'articles/:id' => 'articles#show'
+  
+  ####EDIT - return an HTML form for editing a photo
+  # get 'articles/:id/edit' => 'articles#edit', as: :edit_article
+  
+  ####UPDATE - update a specific photo
+  # get 'articles/:id' => 'articles#update'
+  
+  ####DELETE - delete a specific photo
+  # get 'articles/:id/destroy' => 'articles#destroy', as: :article
 
  
-  # resources :articles
+  
 
-  root 'welcome#index'
+  
 end
  
 
