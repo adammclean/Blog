@@ -7,8 +7,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
 	private
-
-	#Find by sessions :user_id but only if there is one present
+  #Find by sessions user id but only if there is one 
 	def current_user
 		@current_user ||= User.find(session[:user_id]) if session[:user_id]
 	end

@@ -1,9 +1,7 @@
-<!-- There is jquery_ujs preloaded here which allows for HTML5 functionality such as the dropdown 'are you sure you want to delete' menu for our 'destroy' action -->
-
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blog</title>
+  <title>Auth</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -19,8 +17,10 @@
 	<%= link_to "Log in", log_in_path %>
 	<% end %>
 	
-
 </div>
+
+<%= flash.each do |name, msg| %>
+	<%= content_tag :div, msg, :id => "flash_#{name}" %>
 
 <%= yield %>
 
