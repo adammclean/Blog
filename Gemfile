@@ -3,8 +3,9 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
+gem 'sqlite3', '~> 1.3.3'
 #Use PG gem
-gem 'pg'
+# gem 'pg'
 #Bcrypt
 gem 'bcrypt-ruby', :require => 'bcrypt'
 # Use SCSS for stylesheets

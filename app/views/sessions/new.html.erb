@@ -1,7 +1,7 @@
 <h1>Log in</h1>
 
-<!-- #sessions path goes to create action -->
-<%= form_tag sessions_path do %>
+<!-- #go to sessions_path -->
+<%= form_tag '#' do %>
 
 <p>
 	<%= label_tag :email %><br />
@@ -12,4 +12,4 @@
 	<%= password_field_tag :password %>
 </p>
 <p class="button"><%= submit_tag %></p>
-<% end  %>
+<% end %>
