@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'articles/:id' => 'articles#show', as: :article
   post 'articles' => 'articles#create'
   get 'articles/edit' => 'articles#edit', as: :edit_article
-
+  get 'articles/destroy' => 'articles@destroy'
 
   # resources :articles
 

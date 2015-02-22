@@ -11,15 +11,15 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
-
+  #GET action
   def new
   	@article = Article.new
   end
 
-  #render method with key=>plain; value=>params[:article].inspect
-  #params method is an object
+  
+  #POST action; if save, redirect to SHOW page (@article path)
   def create
-  	#We define article_params in 'private'
+  	
   	@article = Article.new(article_params)
   		
   	if @article.save
@@ -30,7 +30,7 @@ class ArticlesController < ApplicationController
   	end
   end
   
-
+  #PATCH action, if successful, redirect to SHOW page (@article path)
   def update
     @article = Article.find(params[:id])
 
@@ -41,6 +41,7 @@ class ArticlesController < ApplicationController
     end
   end
 
+  #Redirects us to INDEX (articles_path) so no need for a VIEW; 
   def destroy
     @article = Article.find(params[:id])
     @article.destroy
