@@ -1,3 +1,5 @@
+<!-- Show the articles - title and text -->
+
 <p>
 	<strong>Title:</strong>
 	<%= @article.title %>
@@ -7,6 +9,25 @@
 	<strong>Text:</strong>
 	<%= @article.text %>
 </p>
+
+
+<!-- 'Show' all of the comments; commenter and comment -->
+
+<h2>Comments</h2>
+<% @article.comments.each do |comment| %>
+<p>
+	<strong>Commenter:</strong>
+	<%= comment.commenter  %>
+</p>
+
+	<p>
+	<strong>Comment:</strong>
+	<%= comment.body %>
+	</p>
+	<% end  %>
+
+
+<!-- Add a comment -->
 
 <h2>Add a comment:</h2>
 <%= form_for ([@article, @article.comments.build]) do |f| %>
@@ -24,6 +45,8 @@
 	<%= f.submit %>
 </p>
 <%= end %>
+
+<!-- Links to the index and edit -->
 
 <%= link_to 'Back', articles_path %>
 <%= link_to 'Edit', edit_article_path(@article) %>
