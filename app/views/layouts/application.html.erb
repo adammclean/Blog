@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<div id="user_nav">
+<div id="user_nav" class = "proxima">
 	<% if current_user  %>
 	Logged in as <%= current_user.email %>.
 	<%= link_to "Log out", log_out_path %>
@@ -20,7 +20,6 @@
 	<%= link_to "Sign up", sign_up_path %> or
 	<%= link_to "Log in", log_in_path %>
 	<% end %>
-	
 </div>
 
 <%= flash.each do |name, msg| %>
