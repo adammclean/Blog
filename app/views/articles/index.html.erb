@@ -8,24 +8,28 @@
 
 
 	<div id = 'articleContainer'>
-		<table>
-			<tr>
+		<!-- <table> -->
+			<!-- <tr>
 				<th>Title</th>
 				<th>Text</th>
 				<th colspan="2"></th>
-			</tr>
+			</tr> -->
 
 	<% @articles.each do |article| %>
-		<tr>
-			<td><%= article.title %></td>
-			<td><%= article.text %></td>
-			<td><%= link_to 'Show', article_path(article) %></td>
-			<td><%= link_to 'Edit', edit_article_path(article) %></td>
-			<td><%= link_to 'Destroy', article_path(article), method: :delete, data: {  confirm: 'Are you sure you want to delete this post?'}  %>
-			</td>
+		<!-- <tr> -->
+			<div id = titleDiv>
+				<li class = 'abril'><%= article.title %></li>
+			</div>
+			<div id = articleDiv>
+				<li class = 'abril'><%= article.text %></li>
+			</div>
+			<li><%= link_to 'Show', article_path(article) %></li>
+			<li><%= link_to 'Edit', edit_article_path(article) %></li>
+			<li><%= link_to 'Destroy', article_path(article), method: :delete, data: {  confirm: 'Are you sure you want to delete this post?'}  %>
+			</li>
 			
-		</tr>
+		<!-- </tr> -->
 	<% end %>
-	</table>
+	<!-- </table> -->
 	</div> <!-- article container div -->
 </div> <!-- main container div	 -->

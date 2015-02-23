@@ -26,4 +26,22 @@
 	}
 }
 
-#articleContainer {}
+#articleContainer {
+	margin-top: 100px;
+	border: 1px solid black;
+	position: relative;
+}
+
+#titleDiv {
+	border: 1px solid black;
+	height: 50px;
+	width: 600px;
+	margin: 0 auto;
+}
+
+#articleDiv {
+	border: 1px solid black;
+	height: 400px;
+	width: 600px;
+	margin: 0 auto;
+}
