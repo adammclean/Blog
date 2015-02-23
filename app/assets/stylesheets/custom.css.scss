@@ -1,0 +1,29 @@
+
+
+/* Font Abril */
+
+.abril {
+  font-family: 'Abril Fatface', 
+}
+
+#mainContainer {
+	height: 100%;
+	width: 100%px;
+	border: 1px solid black;
+	position: relative;
+}
+
+#jumbotron {
+	font-size: 64px;
+	width: 600px;
+	height: 100px;
+	border: 1px solid black;
+	margin: 0 auto;
+	
+	p {
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
+#articleContainer {}

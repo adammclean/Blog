@@ -12,7 +12,6 @@ class CommentsController < ApplicationController
 	end
 
 
-	###We can't simply refer to the @article instance defined in Create?
 	def destroy
 		@article = Article.find(params[:article_id])
 		@comment = @article.comment
@@ -21,7 +20,7 @@ class CommentsController < ApplicationController
 	end
 
 	private
-		def comment_params
-			params.require(:comment).permit(:commenter, :body)
-		end
+	def comment_params
+		params.require(:comment).permit(:commenter, :body)
+	end
 end
