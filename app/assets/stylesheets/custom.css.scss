@@ -1,10 +1,6 @@
 
+/********** Style Header ********/
 
-/* Font Abril */
-
-.abril {
-  font-family: 'Abril Fatface', 
-}
 
 #mainContainer {
 	height: 100%;
@@ -14,17 +10,35 @@
 }
 
 #jumbotron {
-	font-size: 64px;
 	width: 600px;
 	height: 100px;
 	border: 1px solid black;
 	margin: 0 auto;
+	margin-bottom: -40px;
+	padding-top: 100px;
+
 	
 	p {
 		margin: 0 auto;
 		text-align: center;
+		font-size: 64px;
 	}
 }
+
+#tagLine {
+	font-size: 20px;
+	line-height: 26px;
+	color: #6e6e6e;
+	font-weight: 300;
+	max-width: 450px;
+	margin: 0 auto;
+	margin-bottom: 55px;
+	margin-top: 5px;
+	padding-left: 250px;
+	padding-right: 10px;
+}
+
+/********** Style Articles ********/
 
 #articleContainer {
 	margin-top: 100px;
@@ -37,6 +51,13 @@
 	height: 50px;
 	width: 600px;
 	margin: 0 auto;
+	position: relative;
+
+	p {
+	font-size: 30px;
+	text-align: left;
+	margin: 0 auto;
+	}
 }
 
 #articleDiv {
@@ -44,4 +65,10 @@
 	height: 400px;
 	width: 600px;
 	margin: 0 auto;
+	text-align: left;
+
+	p {
+	-webkit-font-smoothing: antialiased;
+	}
+
 }
